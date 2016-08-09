@@ -12,39 +12,7 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scrollbars="vertical" />
-
-    <!--<android.support.v7.widget.CardView-->
-    <!--xmlns:card_view="http://schemas.android.com/apk/res-auto"-->
-    <!--android:id="@+id/card_view"-->
-    <!--android:layout_gravity="center"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="200dp"-->
-    <!--card_view:cardCornerRadius="4dp"-->
-    <!--card_view:cardElevation="@dimen/cardview_default_elevation">-->
-
-    <!--<RelativeLayout android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content">-->
-
-    <!--<ImageView-->
-    <!--android:id="@+id/image"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"/>-->
-
-    <!--<TextView-->
-    <!--android:id="@+id/title"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_below="@id/image"/>-->
-
-    <!--<TextView-->
-    <!--android:id="@+id/eventMessage"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_below="@id/title"/>-->
-
-    <!--</RelativeLayout>-->
-
-    <!--</android.support.v7.widget.CardView>-->
+        android:clipToPadding="false"
+        android:padding="@dimen/keyline_quarter" />
 
 </LinearLayout>

@@ -1,5 +1,7 @@
 <resources>
     <dimen name="keyline">16dp</dimen>
+    <dimen name="keyline_quarter">4dp</dimen>
+    <dimen name="keyline_half">8dp</dimen>
     <dimen name="grid_1x">8dp</dimen>
     <dimen name="grid_2x">16dp</dimen>
     <dimen name="grid_4x">32dp</dimen>
