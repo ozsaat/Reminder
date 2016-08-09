@@ -1,28 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.oz.reminder.ReminderActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="@dimen/elevation_toolbar"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        tools:targetApi="lollipop" />
 
     <EditText
         android:id="@+id/titleEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true" />
+        android:background="?colorPrimary"
+        android:elevation="@dimen/elevation_toolbar"
+        android:hint="@string/title"
+        android:inputType="textCapSentences"
+        android:padding="@dimen/keyline"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="?android:textColorPrimaryInverse"
+        tools:targetApi="lollipop" />
 
-    <EditText
-        android:id="@+id/messageEditText"
-        android:layout_width="wrap_content"
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@id/titleEditText" />
+        android:layout_marginLeft="@dimen/keyline"
+        android:layout_marginRight="@dimen/keyline"
+        android:layout_marginTop="@dimen/grid_2x">
 
-    <Button
-        android:id="@+id/saveButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/messageEditText"
-        android:text="SAVE" />
+        <EditText
+            android:id="@+id/messageEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/description"
+            android:inputType="textCapSentences" />
 
-</RelativeLayout>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#ffffff"
+        android:elevation="@dimen/elevation_toolbar"
+        tools:targetApi="lollipop">
+
+        <Button
+            android:id="@+id/saveButton"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:text="@string/save" />
+
+    </FrameLayout>
+
+</LinearLayout>
