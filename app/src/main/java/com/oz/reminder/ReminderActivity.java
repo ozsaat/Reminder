@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,7 +31,9 @@ public class ReminderActivity extends AppCompatActivity {
         titleEditText = (EditText) findViewById(R.id.titleEditText);
         messageEditText = (EditText) findViewById(R.id.messageEditText);
         Button saveButton = (Button) findViewById(R.id.saveButton);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
+        setSupportActionBar(toolbar);
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
